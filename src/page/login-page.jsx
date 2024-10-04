@@ -3,7 +3,7 @@ import { TextField, Button, Checkbox, FormControlLabel, Typography, Box, Link, D
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
-export default function SignUp() {
+export default function LoginPage() {
 
   document.body.style.backgroundColor = "#009933";
 
@@ -15,10 +15,10 @@ export default function SignUp() {
               fontFamily: 'Noto Sans Thai, sans-serif',
               fontWeight: 'bold', 
               fontSize: '3rem', 
-              color: '#FF9900', 
+              color: '#fff', 
               textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
               marginTop: 4}}>
-                                CF ME
+              CF ME
             </Typography>
         </Box>
       <Box
@@ -35,27 +35,8 @@ export default function SignUp() {
         }}
       >
         <Typography variant="h4" sx={{ color: '	#000000', marginBottom: 2 ,fontFamily: 'Noto Sans Thai, sans-serif'}}>
-          Sign up
+          Sign In
         </Typography>
-        <TextField
-          label="Full name"
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          sx={{
-            input: { color: '#000000' },
-            label: { color: '	#000000' },
-            fieldset: { borderColor: '#000000' },
-            '& label.Mui-focused': {
-              color: '#000000', // เปลี่ยนสีเป็นขาวเมื่อถูกโฟกัส
-            },
-            '& .MuiOutlinedInput-root': {
-              '&.Mui-focused fieldset': {
-                borderColor: '#000000', // เปลี่ยนสีของกรอบเมื่อถูกโฟกัส
-              },
-            },
-          }}
-        />
         <TextField
           label="Email"
           fullWidth
@@ -100,8 +81,12 @@ export default function SignUp() {
           fullWidth
           sx={{ backgroundColor: '#006600', color: '#fff', marginBottom: 2, marginTop : 2 }}
         >
-          Sign up
+          Sign In
         </Button>
+        <Typography sx={{fontFamily: 'Noto Sans Thai, sans-serif'}}>
+          Do you have any account?
+          <Link>SignUp</Link>
+        </Typography>
       </Box>
     </Container>
   );

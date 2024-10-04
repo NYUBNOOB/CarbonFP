@@ -4,16 +4,14 @@ import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 
-export default function SignUp() {
+export default function SignUpPage() {
 
   document.body.style.backgroundColor = "#009933";
 
   return (
     <Container maxWidth="md" sx={{my:10}}>
-        <Box sx={{textAlign :'center', color:'white' }}>
-            <Typography variant='h2'>
-            CF ME
-            </Typography>
+        <Box sx={{textAlign :'center', color:'white'}}>
+            <Typography variant='h2' sx={{fontFamily: 'Noto Sans Thai, sans-serif'}}>CF ME</Typography>
         </Box>
       <Box
         sx={{
@@ -32,7 +30,7 @@ export default function SignUp() {
           Sign up
         </Typography>
         <TextField
-          label="Full name"
+          label="Username"
           fullWidth
           margin="normal"
           variant="outlined"
