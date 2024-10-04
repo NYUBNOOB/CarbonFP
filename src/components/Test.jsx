@@ -3,6 +3,7 @@ import { TextField, Button, Checkbox, FormControlLabel, Typography, Box, Link, D
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
+
 export default function SignUp() {
 
   document.body.style.backgroundColor = "#009933";
@@ -10,15 +11,8 @@ export default function SignUp() {
   return (
     <Container maxWidth="md" sx={{my:10}}>
         <Box sx={{textAlign :'center', color:'white' }}>
-            <Typography variant='h2' 
-            sx={{ 
-              fontFamily: 'Noto Sans Thai, sans-serif',
-              fontWeight: 'bold', 
-              fontSize: '3rem', 
-              color: '#FF9900', 
-              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
-              marginTop: 4}}>
-                                CF ME
+            <Typography variant='h2'>
+            CF ME
             </Typography>
         </Box>
       <Box
@@ -34,7 +28,7 @@ export default function SignUp() {
           mt: { xs: 2, sm: 5 }, // Responsive margin-top
         }}
       >
-        <Typography variant="h4" sx={{ color: '	#000000', marginBottom: 2 ,fontFamily: 'Noto Sans Thai, sans-serif'}}>
+        <Typography variant="h4" sx={{ color: '	#000000', marginBottom: 2 }}>
           Sign up
         </Typography>
         <TextField
