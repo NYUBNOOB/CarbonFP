@@ -2,10 +2,12 @@ import React from 'react';
 import { TextField, Button, Checkbox, FormControlLabel, Typography, Box, Link, Divider, Container } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
 
   document.body.style.backgroundColor = "#009933";
+  const navigate = useNavigate();
 
   return (
     <Container maxWidth="md" sx={{my:10}}>
@@ -79,13 +81,13 @@ export default function LoginPage() {
         <Button
           variant="contained"
           fullWidth
-          sx={{ backgroundColor: '#006600', color: '#fff', marginBottom: 2, marginTop : 2 }}
+          sx={{ backgroundColor: '#006600', color: '#fff', marginBottom: 2, marginTop : 2 }} onClick={()=> navigate('/')}
         >
           Sign In
         </Button>
         <Typography sx={{fontFamily: 'Noto Sans Thai, sans-serif'}}>
-          Do you have any account?
-          <Link>SignUp</Link>
+          Don't have any account?
+          <Button sx={{fontFamily: 'Noto Sans Thai, sans-serif'}} onClick={()=> navigate('/signup')}>SingUp</Button>
         </Typography>
       </Box>
     </Container>

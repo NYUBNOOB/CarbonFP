@@ -1,13 +1,12 @@
 import React from 'react';
 import { TextField, Button, Checkbox, FormControlLabel, Typography, Box, Link, Divider, Container } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUpPage() {
 
   document.body.style.backgroundColor = "#009933";
-
+  const navigate = useNavigate();
+  
   return (
     <Container maxWidth="md" sx={{my:10}}>
         <Box sx={{textAlign :'center', color:'white'}}>
@@ -86,7 +85,25 @@ export default function SignUpPage() {
             },
           }}
         />
-        
+        <TextField
+          label="ConfirmPassword"
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          sx={{
+            input: { color: '#000000' },
+            label: { color: '#000000' },
+            fieldset: { borderColor: '#000000' },
+            '& label.Mui-focused': {
+              color: '#000000', // เปลี่ยนสีเป็นขาวเมื่อถูกโฟกัส
+            },
+            '& .MuiOutlinedInput-root': {
+              '&.Mui-focused fieldset': {
+                borderColor: '#000000', // เปลี่ยนสีของกรอบเมื่อถูกโฟกัส
+              },
+            },
+          }}
+        />
         <Button
           variant="contained"
           fullWidth
@@ -94,6 +111,10 @@ export default function SignUpPage() {
         >
           Sign up
         </Button>
+        <Typography sx={{fontFamily: 'Noto Sans Thai, sans-serif'}}>
+          Do you have any account?
+          <Button sx={{fontFamily: 'Noto Sans Thai, sans-serif'}} onClick={()=> navigate('/login')}>SignIn</Button>
+        </Typography>
       </Box>
     </Container>
   );

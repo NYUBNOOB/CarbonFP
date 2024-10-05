@@ -8,7 +8,7 @@ const Routes = () => {
     const element = useRoutes([
         {   path: '/', element: <HomePage /> },
         {   path: 'login', element: <LoginPage />},
-        {   path: 'SignUp', element : <SignUpPage />}                    
+        {   path: 'Signup', element : <SignUpPage />}                    
     ]);
 
     return element;
