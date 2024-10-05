@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Box,Typography } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid';
-import cfme from './assets/cfme.jpeg'
+
 
 
 const columns = [
@@ -42,9 +42,10 @@ const HomePage = () => {
         
         <Container sx={{ }} >
 
-            <div>
-            <img src={cfme} alt="cfme" style={{ width: '300px', height: 'auto' }} />
-            </div>
+           <Box>
+            <img src="/images/cfme.jpeg" alt="Public Image" style={{ width: '200px', height: '200px' }} />
+            </Box>
+           
 
         <Box sx={{textAlign :'center', color:'Black', marginTop:5,marginBottom:3}}>
             <Typography variant='h2' sx={{fontFamily: 'Noto Sans Thai, sans-serif'}}>CF ME</Typography>
